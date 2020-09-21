@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Limitz Converter</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="normalize.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="card">
+                <div class="head">
+                    <h1>YouTube To MP3</h1>
+                    <h4>No ads, no virusses</h4>
+                </div>
+                <form class="body" method="POST" action="./">
+                    <input type="text" id="url" name="url" placeholder="URL" />
+                    <br />
+                    <button>Converteer</button>
+                </form>
+                <div class="foot">
+                    <h4>Created with ❤️ by hw</h4>
+                </div>
+            </div>
+        </div>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("button").click(function () {
+                    $.post("./", {
+                        url: $("#url").val(),
+                    }).done((data) => {
+                        if (data.code === 400) alert("Invalid video URL");
+                    });
+                });
+            });
+        </script> -->
+    </body>
+</html>
