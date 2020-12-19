@@ -14,8 +14,62 @@
                     <h1>YouTube To MP3</h1>
                     <h4>No ads, no virusses</h4>
                 </div>
-                <form class="body" method="POST" action="./">
+                <form class="body" method="POST" action="./test">
                     <input type="text" id="url" name="url" placeholder="URL" />
+                    <br />
+                    <input
+                        type="text"
+                        id="artist"
+                        name="artist"
+                        placeholder="Artist"
+                    />
+                    <br />
+                    <input
+                        type="text"
+                        id="title"
+                        name="title"
+                        placeholder="Title"
+                    />
+                    <p onclick="go()" style="color: blue; text-align: right">
+                        Genre zoeken
+                    </p>
+                    <select name="genre">
+                        <option value="Afro House">Afro House</option>
+                        <option value="Bass House">Bass House</option>
+                        <option value="Big Room">Big Room</option>
+                        <option value="Dance">Dance</option>
+                        <option value="Deep House">Deep House</option>
+                        <option value="Drum & Bass">Drum & Bass</option>
+                        <option value="Dubstep">Dubstep</option>
+                        <option value="Electro House">Electro House</option>
+                        <option value="Electronica">Electronica</option>
+                        <option value="Funky House">Funky House</option>
+                        <option value="Future House">Future House</option>
+                        <option value="Garage">Garage</option>
+                        <option value="Hard Dance">Hard Dance</option>
+                        <option value="Hard Techno">Hard Techno</option>
+                        <option value="House">House</option>
+                        <option value="Melodic House & Techno">
+                            Melodic House & Techno
+                        </option>
+                        <option value="Minimal/Deep Tech">
+                            Minimal/Deep Tech
+                        </option>
+                        <option value="Downtempo">Downtempo</option>
+                        <option value="Progressive House">
+                            Progressive House
+                        </option>
+                        <option value="Psy-Trance">Psy-Trance</option>
+                        <option value="Tech House">Tech House</option>
+                        <option value="Techno (Peak Time / Driving)">
+                            Techno (Peak Time / Driving)
+                        </option>
+                        <option value="Techno (Raw / Deep / Hypnotic)">
+                            Techno (Raw / Deep / Hypnotic)
+                        </option>
+                        <option value="Trance">Trance</option>
+                        <option value="Trap">Trap</option>
+                    </select>
                     <br />
                     <button>Converteer</button>
                 </form>
@@ -24,17 +78,20 @@
                 </div>
             </div>
         </div>
-        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            $(document).ready(function () {
-                $("button").click(function () {
-                    $.post("./", {
-                        url: $("#url").val(),
-                    }).done((data) => {
-                        if (data.code === 400) alert("Invalid video URL");
-                    });
-                });
-            });
-        </script> -->
+            const go = () => {
+                const artist = $("#artist").val(),
+                    title = $("#title").val();
+
+                window.open(
+                    "https://www.google.com/search?q=beatport+" +
+                        artist +
+                        " " +
+                        title,
+                    "_blank"
+                );
+            };
+        </script>
     </body>
 </html>
